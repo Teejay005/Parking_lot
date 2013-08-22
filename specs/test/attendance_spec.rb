@@ -19,11 +19,9 @@ describe Attendant do
 
   it 'should know when the parking lot is full' do
     parking_lot = Parking_lot.new 3
-
-    parking_lot.park
-    parking_lot.park
-    parking_lot.park
-
+    3.times do
+      parking_lot.park
+    end
     parking_lot.parking_lot_full.should ==true
   end
 end
